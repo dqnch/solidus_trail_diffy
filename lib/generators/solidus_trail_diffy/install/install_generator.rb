@@ -2,6 +2,15 @@ module SolidusTrailDiffy
   module Generators
     class InstallGenerator < Rails::Generators::Base
       class_option :auto_run_migrations, type: :boolean, default: false
+      source_root File.expand_path('../templates', __dir__)
+
+      def install_paper_trali
+        run 'bundle exec rails generate paper_trail:install --with-changes'
+      end
+
+      def copy_initializer
+        template 'solidus_trail_diffy.rb', 'config/initializers/solidus_trail_diffy.rb'
+      end
 
       def add_javascripts
         append_file 'vendor/assets/javascripts/spree/frontend/all.js', "//= require spree/frontend/solidus_trail_diffy\n"

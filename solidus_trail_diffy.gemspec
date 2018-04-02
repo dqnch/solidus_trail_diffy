@@ -1,5 +1,4 @@
-# encoding: UTF-8
-$:.push File.expand_path('../lib', __FILE__)
+$LOAD_PATH.push File.expand_path('lib', __dir__)
 require 'solidus_trail_diffy/version'
 
 Gem::Specification.new do |s|
@@ -9,11 +8,11 @@ Gem::Specification.new do |s|
   s.description = 'Provides pages with data changeset view.'
   s.license     = 'BSD-3-Clause'
 
-  s.authors       = ["kawamura.hryk"]
-  s.email         = ["kawamura.hryk@gmail.com"]
-  s.homepage      = "https://github.com/dqnch/solidus_trail_diffy"
+  s.authors       = ['kawamura.hryk']
+  s.email         = ['kawamura.hryk@gmail.com']
+  s.homepage      = 'https://github.com/dqnch/solidus_trail_diffy'
 
-  s.files = Dir["{app,config,db,lib}/**/*", 'LICENSE', 'Rakefile', 'README.md']
+  s.files = Dir['{app,config,db,lib}/**/*', 'LICENSE', 'Rakefile', 'README.md']
   s.test_files = Dir['test/**/*']
 
   s.add_dependency 'solidus_core'
