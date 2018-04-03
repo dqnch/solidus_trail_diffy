@@ -9,7 +9,7 @@ Installation
 Add solidus_trail_diffy to your Gemfile:
 
 ```ruby
-gem 'solidus_trail_diffy'
+gem 'solidus_trail_diffy', github: 'dqnch/solidus_trail_diffy'
 ```
 
 Bundle your dependencies and run the installation generator:
